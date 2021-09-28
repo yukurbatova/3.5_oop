@@ -30,9 +30,9 @@ public class ProductManager {
     }
 
     public boolean matches(Product product, String search) {
-        if (product instanceof Book) { // если в параметре product лежит объект класса Book
-            Book book = (Book) product; // положем его в переменную типа Book чтобы пользоваться методами класса Book
-            if (book.getAuthor().contains(search)) { // проверим есть ли поисковое слово в данных об авторе
+        if (product instanceof Book) {
+            Book book = (Book) product;
+            if (book.getAuthor().contains(search)) {
                 return true;
             }
             if (book.getName().contains(search)) {
@@ -40,12 +40,12 @@ public class ProductManager {
             }
             return false;
         }
-        if (product instanceof Smartphone) { // если в параметре product лежит объект класса смартфон
-            Smartphone smartphone = (Smartphone) product; // положем его в переменную типа смартфон чтобы пользоваться методами класса смартфон
-            if (smartphone.getManufacturer().contains(search)) { // проверим есть ли поисковое слово в данных об авторе
+        if (product instanceof Smartphone) {
+            Smartphone smartphone = (Smartphone) product;
+            if (smartphone.getManufacturer().contains(search)) {
                 return true;
             }
-            if (smartphone.getName().contains(search)) { // проверим есть ли поисковое слово в данных об авторе
+            if (smartphone.getName().contains(search)) {
                 return true;
             }
         }
